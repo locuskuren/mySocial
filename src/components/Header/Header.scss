@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+
+  .content {
+    width: 975px;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 559px) {
+      flex-direction: column;
+      margin: 5px 0;
+    }
+
+    .logo {
+      font-family: 'Grand Hotel', cursive;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .search-bar {
+      width: 270px;
+
+      @media screen and (max-width: 559px) {
+        margin: 10px 0;
+      }
+
+      input {
+        width: 100%;
+        font-size: 18px;
+        padding: 5px 0 5px 10px;
+        font-weight: 100;
+        border-color: rgba(255, 255, 255, 0);
+        background-color: #efefef;
+        border-radius: 8px;
+
+        &:focus {
+          outline-color: rgba(255, 255, 255, 0);
+        }
+      }
+
+      .dropdown {
+        height: 365px;
+        width: 284px;
+        position: absolute;
+        background-color: white;
+        border: 2px solid #efefef;
+        margin-top: 9px;
+        z-index: 2;
+        overflow-x: auto;
+
+        .search-results {
+          margin: 10px 10px;
+
+          span {
+            font-weight: 500;
+          }
+
+          .result {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+
+            img {
+              height: 44px;
+              width: 44px;
+              border-radius: 50%;
+              margin-right: 20px;
+            }
+          }
+
+          .no-results {
+            margin-top: 180px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #8e8e8e;
+          }
+
+          .loading-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 140px;
+          }
+        }
+      }
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        margin-right: 15px;
+        font-size: 30px;
+      }
+
+      img {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+    }
+  }
+}

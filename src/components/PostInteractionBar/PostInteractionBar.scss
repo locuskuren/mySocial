@@ -1,0 +1,26 @@
+.interaction-bar {
+  padding: 14px 14px 0 14px;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  border-bottom: none;
+
+  .interaction-button {
+    color: #262626;
+    margin-right: 12px;
+    font-size: 33px;
+    cursor: pointer;
+
+    &:hover {
+      color: #d3d3d3;
+    }
+  }
+  #red {
+    color: red;
+  }
+
+  .likes {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,44 @@
+.comments-section {
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  border-bottom: none;
+  padding: 7px 14px 0 14px;
+  flex: 1;
+  padding-bottom: 14px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 780px) {
+    max-height: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .comment {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    p {
+      line-height: 120%;
+      margin-bottom: 5px;
+      word-wrap: break-word;
+
+      span {
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .view-more {
+      color: #8e8e8e;
+      cursor: pointer;
+    }
+  }
+}

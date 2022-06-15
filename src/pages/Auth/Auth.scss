@@ -1,0 +1,158 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  .phone {
+    background-image: url('https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png');
+    height: 650px;
+    width: 390px;
+    margin-right: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+
+    &-bg {
+      position: absolute;
+      width: 250px;
+      height: 550px;
+      top: 30px;
+      right: 20px;
+      opacity: 0;
+      background-position: center;
+      background-size: cover;
+      animation: slideshow 10s linear infinite;
+    }
+
+    @keyframes slideshow {
+      0% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png');
+      }
+      20% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png');
+      }
+      25% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot2.png/4d62acb667fb.png');
+      }
+      45% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot2.png/4d62acb667fb.png');
+      }
+      50% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot3.png/94edb770accf.png');
+      }
+      70% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot3.png/94edb770accf.png');
+      }
+      75% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot4.png/a4fd825e3d49.png');
+      }
+      95% {
+        opacity: 1;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot4.png/a4fd825e3d49.png');
+      }
+      100% {
+        opacity: 0;
+        background-image: url('https://www.instagram.com/static/images/homepage/screenshots/screenshot4.png/a4fd825e3d49.png');
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+
+    .form-box {
+      border: 1px solid #eee;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .logo {
+        font-family: 'Grand Hotel', cursive;
+        font-weight: 600;
+        margin: 45px 0;
+        font-size: 45px;
+      }
+
+      .auth-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+
+        input {
+          padding-left: 5px;
+          width: 100%;
+          height: 40px;
+          border: 1px solid #eee;
+          background-color: #fafafa;
+          border-radius: 3px;
+          margin-bottom: 8px;
+          color: black;
+
+          &:focus {
+            outline-color: #a9a9a9;
+          }
+        }
+
+        button {
+          background-color: #0095f6;
+          width: 100%;
+          height: 27px;
+          color: white;
+          font-size: 0.9rem;
+          font-weight: 600;
+          border: none;
+          border-radius: 5px;
+          margin: 10px 0 20px;
+          cursor: pointer;
+
+          &:disabled {
+            background-color: #0095f64d;
+            cursor: default;
+          }
+        }
+
+        span {
+          text-align: center;
+          color: red;
+          margin: 10px 0 30px 0;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .switch-form-box {
+      background-color: white;
+      border: 1px solid #eee;
+      margin-top: 10px;
+      text-align: center;
+      padding: 20px 0;
+
+      span {
+        font-weight: 300;
+
+        span {
+          font-weight: 400;
+          color: #0095f6;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

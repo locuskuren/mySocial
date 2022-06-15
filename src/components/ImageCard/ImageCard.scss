@@ -1,0 +1,23 @@
+.image-card {
+  width: 614px;
+  margin: 17px 0;
+  background-color: white;
+
+  @media screen and (max-width: 613px) {
+    width: 100vw;
+  }
+
+  img {
+    height: auto;
+    width: 612px;
+    object-fit: contain;
+    display: block;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    border-bottom: none;
+
+    @media screen and (max-width: 613px) {
+      width: 100vw;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.create-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 5px;
+
+  .wrapper {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    background-color: white;
+
+    .top-bar {
+      border-bottom: 1px solid #d3d3d3;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .share {
+      border: none;
+      background-color: #fff;
+      color: #0095f6;
+      font-weight: 700;
+      margin-right: 7px;
+      cursor: pointer;
+
+      &:disabled {
+        color: #a6d5f5;
+        cursor: default;
+      }
+    }
+
+    .upload-container {
+      display: flex;
+
+      @media screen and (max-width: 990px) {
+        flex-direction: column;
+      }
+
+      .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        min-width: 500px;
+        max-width: 615px;
+
+        @media screen and (max-width: 990px) {
+          min-width: unset;
+          max-width: unset;
+          min-height: 300px;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .comment-box {
+        border-left: 1px solid #d3d3d3;
+
+        @media screen and (max-width: 990px) {
+          border-left: none;
+          border-top: 1px solid #d3d3d3;
+        }
+
+        .profile {
+          display: flex;
+          align-items: center;
+          margin: 20px 15px;
+
+          img {
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+
+          span {
+            color: #262626;
+            font-weight: 500;
+          }
+        }
+
+        textarea {
+          width: 330px;
+          padding: 0 15px 15px 15px;
+          border: none;
+          resize: none;
+          height: 200px;
+          outline: none;
+          font-family: 'Roboto', sans-serif;
+          font-size: 1rem;
+
+          @media screen and (max-width: 990px) {
+            width: 90vw;
+          }
+        }
+
+        .share-container {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 10px 0;
+          border-bottom: 1px solid #d3d3d3;
+
+          @media screen and (max-width: 990px) {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

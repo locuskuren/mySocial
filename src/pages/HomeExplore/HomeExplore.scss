@@ -1,0 +1,33 @@
+.home-explore {
+  display: flex;
+  justify-content: center;
+
+  .loading-error-container {
+    width: 614px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 614px) {
+      width: 90vw;
+    }
+  }
+
+  .imagecard-container {
+    min-width: 614x;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media screen and (max-width: 614px) {
+      min-width: 90vw;
+    }
+
+    .info-message {
+      color: #8e8e8e;
+    }
+  }
+}
