@@ -1,4 +1,6 @@
 .post-wrapper {
+  padding: 0 20px;
+
   .loading-error-wrapper {
     display: flex;
     align-items: center;
@@ -20,17 +22,19 @@
     margin: 50px 0;
     background-color: #fafafa;
 
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 950px) {
       flex-direction: column;
     }
 
     .post-image {
       height: 598px;
       width: auto;
-      object-fit: contain;
+      max-width: 650px;
+      object-fit: fit;
 
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 950px) {
         height: auto;
+        max-width: unset;
         width: 100%;
       }
     }
@@ -43,7 +47,7 @@
       flex-shrink: 1;
       background-color: white;
 
-      @media screen and (max-width: 780px) {
+      @media screen and (max-width: 950px) {
         flex-direction: column;
         width: 100%;
         height: auto;

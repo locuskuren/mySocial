@@ -2,16 +2,22 @@ import { Post } from '../../api/api-data-interfaces';
 import { PostsActionTypes } from '../action-types';
 
 interface PostsRequest {
-  type: PostsActionTypes.POSTS_LOAD_REQUEST;
+  type:
+    | PostsActionTypes.POSTS_LOAD_REQUEST
+    | PostsActionTypes.EXPLORE_POSTS_LOAD_REQUEST;
 }
 
 interface PostsSucess {
-  type: PostsActionTypes.POSTS_LOAD_SUCCESS;
+  type:
+    | PostsActionTypes.POSTS_LOAD_SUCCESS
+    | PostsActionTypes.EXPLORE_POSTS_LOAD_SUCCESS;
   payload: Post[];
 }
 
 interface PostsFail {
-  type: PostsActionTypes.POSTS_LOAD_FAIL;
+  type:
+    | PostsActionTypes.POSTS_LOAD_FAIL
+    | PostsActionTypes.EXPLORE_POSTS_LOAD_FAIL;
   payload: string;
 }
 

@@ -3,10 +3,10 @@ import { useSelector } from './hooks/useTypedSelector';
 
 import Auth from './pages/Auth/Auth';
 import Header from './components/Header/Header';
-import HomeExplore from './pages/HomeExplore/HomeExplore';
 import Post from './pages/Post/Post';
 import Profile from './pages/Profile/Profile';
 import CreatePost from './pages/CreatePost/CreatePost';
+import HomeExplore from './pages/HomeExplore/HomeExplore';
 
 function App() {
   const { currentUser } = useSelector((state) => state.user);

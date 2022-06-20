@@ -21,8 +21,12 @@ const Header: React.FC = () => {
   const [searching, setSearching] = useState(false);
   const currentUser = useSelector((state) => state.user.currentUser);
   const { profiles, error, loading } = useSelector((state) => state.profiles);
-  const { searchProfiles, searchProfilesStart, searchProfilesReset } =
-    useActions();
+  const {
+    searchProfiles,
+    searchProfilesStart,
+    searchProfilesReset,
+    resetPosts,
+  } = useActions();
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -69,7 +73,7 @@ const Header: React.FC = () => {
   return (
     <div className="header">
       <div className="content">
-        <div className="logo">
+        <div className="logo" onClick={() => resetPosts()}>
           <Link to="/">mySocial</Link>
         </div>
         {currentUser && (
@@ -131,14 +135,14 @@ const Header: React.FC = () => {
         )}
         {currentUser && (
           <nav>
-            <Link to="/">
+            <Link to="/" onClick={resetPosts}>
               {window.location.pathname === '/' ? (
                 <HomeIcon className="icon" />
               ) : (
                 <HomeOutlinedIcon className="icon" />
               )}
             </Link>
-            <Link to="/explore">
+            <Link to="/explore" onClick={resetPosts}>
               {window.location.pathname === '/explore' ? (
                 <ExploreIcon className="icon" />
               ) : (

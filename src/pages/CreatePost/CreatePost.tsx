@@ -4,6 +4,7 @@ import { useSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 
 import './CreatePost.scss';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 
 const CreatePost: React.FC = () => {
   const [title, setTitle] = useState('');
@@ -48,6 +49,11 @@ const CreatePost: React.FC = () => {
 
   return (
     <div className="create-post">
+      {loading && (
+        <div className="loading">
+          <LoadingSpinner />
+        </div>
+      )}
       <div className="wrapper">
         <div className="top-bar">
           <span className="title">Create new post</span>

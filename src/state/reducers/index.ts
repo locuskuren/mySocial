@@ -18,7 +18,8 @@ const rootReducer = combineReducers({
   user: userReducer,
   profiles: profilesReducer,
   singlePost: singlePostReducer,
-  posts: postsReducer,
+  homePosts: postsReducer('home'),
+  explorePosts: postsReducer('explore'),
   singleProfile: singleProfileReducer,
 });
 

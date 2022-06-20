@@ -4,6 +4,16 @@
   justify-content: center;
   margin: 30px 5px;
 
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
   .wrapper {
     border: 1px solid #d3d3d3;
     border-radius: 10px;
